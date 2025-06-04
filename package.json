@@ -2,7 +2,7 @@
   "author": "omerfcinoglu",
   "name": "proaktif-krds",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.1.3",
   "type": "module",
   "scripts": {
     "dev": "vite",

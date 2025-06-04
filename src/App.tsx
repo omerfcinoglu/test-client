@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import IndexPage from "@/pages/index";
 import ProjectDetails from "./pages/HomeContent/ProjectDetails";
 import AdminLogin from "./components/AdminDashboard/AdminLogin";
@@ -11,18 +11,20 @@ import VideoRequestForm from "./pages/HomeContent/VideoRequest";
 
 function App() {
   return (
-    <Routes>
-      <Route element={<IndexPage />} path="/" />
-      <Route element={<ProjectDetails />} path="/project" />
-      <Route element={<Team />} path="/team" />
-      <Route element={<VideoRequestForm />} path="/videoRequest" />
-      <Route path="pages/:pageId" element={<CreatedPages />} />
-      <Route path="posts/:postId" element={<PostDetail />} />
-      <Route path="/admin/login" element={<AdminLogin />} />
-      <Route element={<ProtectedRoute />}>
-        <Route path="/admin/dashboard" element={<AdminDashboard />} />
-      </Route>
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<IndexPage />} path="/" />
+        <Route element={<ProjectDetails />} path="/project" />
+        <Route element={<Team />} path="/team" />
+        <Route element={<VideoRequestForm />} path="/videoRequest" />
+        <Route path="pages/:pageId" element={<CreatedPages />} />
+        <Route path="posts/:postId" element={<PostDetail />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
