@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import IndexPage from "@/pages/index";
 import ProjectDetails from "./pages/HomeContent/ProjectDetails";
 import AdminLogin from "./components/AdminDashboard/AdminLogin";
@@ -11,7 +11,7 @@ import VideoRequestForm from "./pages/HomeContent/VideoRequest";
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<IndexPage />} path="/" />
         <Route element={<ProjectDetails />} path="/project" />
@@ -24,7 +24,7 @@ function App() {
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
